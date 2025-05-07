@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/55304c9d-eed3-480d-ba46-a91b48b140f4)﻿# Aprende Jugando 🧠🎮
+# Aprende Jugando 🧠🎮
 
 **Aprende Jugando** es una aplicación educativa multiplataforma desarrollada en **C# con WPF (.NET 8)**. Está pensada para niños de entre **6 y 12 años**, con el objetivo de reforzar sus conocimientos en materias como **Matemáticas, Lengua, Lógica y Ciencias** a través de minijuegos interactivos, visuales y auditivos.
 
