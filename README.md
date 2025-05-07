@@ -21,14 +21,4 @@ Ofrecer un entorno de aprendizaje lúdico y motivador, permitiendo a padres y do
 
 ---
 
-## ⚙️ Tecnologías utilizadas
-
-- **Lenguaje principal:** C# (.NET 8)
-- **Interfaz:** WPF (Windows Presentation Foundation)
-- **Base de datos:** [LiteDB](https://www.litedb.org/) (base de datos embebida en local)
-- **Gestión de la base de datos:** LiteDB.Studio
-- **Gestor de sonido:** Clase `SonidoManager.cs`
-- **Recursos multimedia:** Imágenes, sonidos y vídeos en local
-
----
 
