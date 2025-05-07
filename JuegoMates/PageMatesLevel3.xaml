@@ -1,0 +1,307 @@
+﻿<Page x:Class="AprendeJugando.JuegoMates.PageMatesLevel3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:AprendeJugando.JuegoMates"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      Height="1080" Width="1920"
+      Title="PageMatesLevel3">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resource/Estilos.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <AdornerDecorator x:Name="adornerHost">
+        <Canvas x:Name="fondo">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Images/Imagenes/fondoSinArboles.jpg" />
+            </Canvas.Background>
+
+            <Button Style="{StaticResource BotonVolverEstilo}"
+                    ToolTip="Volver a la pantalla principal"
+                    Click="BtnVolver_Click"
+                    MouseEnter="BtnHover"
+                    Canvas.Left="33"
+                    Canvas.Top="13"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top" />
+
+            <Button Width="128" Height="159"
+                    Canvas.Left="46" Canvas.Top="435"
+                    Click="volverNivel"
+                    Style="{StaticResource BotonDecoradoBase}"
+                    RenderTransformOrigin="0.5,0.5"
+                    MouseEnter="BtnHover"
+                    HorizontalAlignment="Center" VerticalAlignment="Top">
+
+                <Grid>
+                    <Image Source="/Images/Imagenes/botonVacio.png" Stretch="Fill" />
+                    <materialDesign:PackIcon Kind="ChevronLeft"
+                                             Width="50" Height="50"
+                                             Foreground="Black"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+
+            <Button Width="128" Height="160"
+                    Canvas.Left="1765" Canvas.Top="431"
+                    Click="pasarNivel"
+                    Style="{StaticResource BotonDecoradoBase}"
+                    RenderTransformOrigin="0.5,0.5"
+                    MouseEnter="BtnHover"
+                    HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="-1.177" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Button.RenderTransform>
+
+                <Grid>
+                    <Image Source="/Images/Imagenes/botonVacio.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"
+                           Margin="-3,-11,3,11">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="11.615" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <materialDesign:PackIcon Kind="ChevronRight"
+                                             Width="50" Height="50"
+                                             Foreground="Black" RenderTransformOrigin="-0.349,0.995" Margin="36,43,0,0">
+                        <materialDesign:PackIcon.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="12.553" />
+                                <TranslateTransform X="-4.365" Y="-9.817" />
+                            </TransformGroup>
+                        </materialDesign:PackIcon.RenderTransform>
+                    </materialDesign:PackIcon>
+                </Grid>
+            </Button>
+
+            <Border x:Name="dropZona1"
+                    Canvas.Left="335" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/1.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Border x:Name="dropZona2"
+                    Canvas.Left="628" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/2.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Border x:Name="dropZona3"
+                    Canvas.Left="908" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/3.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Border x:Name="dropZona4"
+                    Canvas.Left="1192" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/4.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Border x:Name="dropZona5"
+                    Canvas.Left="1482" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/5.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <TextBlock Text="1" Canvas.Left="397" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" />
+
+            <TextBlock Text="2" Canvas.Left="684" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" />
+
+            <TextBlock Text="3" Canvas.Left="960" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" />
+
+            <TextBlock Text="4" Canvas.Left="1242" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" />
+
+            <TextBlock Text="5" Canvas.Left="1536" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/1.png"
+                   Tag="1"
+                   Canvas.Left="1063" Canvas.Top="598"
+                   Width="216" Height="198"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" HorizontalAlignment="Center"
+                   VerticalAlignment="Top" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/2.png"
+                   Tag="2"
+                   Canvas.Left="397" Canvas.Top="657"
+                   Width="216" Height="198"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" HorizontalAlignment="Center"
+                   VerticalAlignment="Top" RenderTransformOrigin="0.81,0.808" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/3.png"
+                   Tag="3"
+                   Canvas.Left="880" Canvas.Top="726"
+                   Width="216" Height="198"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" HorizontalAlignment="Center"
+                   VerticalAlignment="Top" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/4.png"
+                   Tag="4"
+                   Canvas.Left="628" Canvas.Top="598"
+                   Width="216" Height="198"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" HorizontalAlignment="Center"
+                   VerticalAlignment="Top" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/5.png"
+                   Tag="5"
+                   Canvas.Left="1279" Canvas.Top="627"
+                   Width="216" Height="198"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" HorizontalAlignment="Center"
+                   VerticalAlignment="Top" />
+
+
+            <!--Nivel3-1-->
+            <TextBlock Text="6" Canvas.Left="397" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" Visibility="Collapsed" />
+
+            <TextBlock Text="7" Canvas.Left="684" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" Visibility="Collapsed" />
+
+            <TextBlock Text="8" Canvas.Left="960" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" Visibility="Collapsed" />
+
+            <TextBlock Text="9" Canvas.Left="1242" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" Visibility="Collapsed" />
+
+            <TextBlock Text="10" Canvas.Left="1500" Canvas.Top="139"
+                       Style="{StaticResource NumeroEstilo}" Visibility="Collapsed" HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+
+
+            <Border x:Name="dropZona6"
+                    Canvas.Left="335" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver" Visibility="Collapsed">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/6.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Border x:Name="dropZona7"
+                    Canvas.Left="628" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver" Visibility="Collapsed">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/7.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Border x:Name="dropZona8"
+                    Canvas.Left="908" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver" Visibility="Collapsed">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/8.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Border x:Name="dropZona9"
+                    Canvas.Left="1192" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver" Visibility="Collapsed">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/9.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Border x:Name="dropZona10"
+                    Canvas.Left="1482" Canvas.Top="340"
+                    Style="{StaticResource ZonaDropEstilo}"
+                    Drop="ZonaDrop_Drop" DragOver="ZonaDrop_DragOver" Visibility="Collapsed">
+                <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/10.png"
+                       Opacity="0.2" Stretch="Uniform"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/6.png"
+                   Canvas.Left="792" Canvas.Top="612"
+                   Width="216" Height="198"
+                   Tag="6"
+                   Visibility="Collapsed"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/7.png"
+                   Canvas.Left="1380" Canvas.Top="656"
+                   Width="216" Height="198"
+                   Tag="7"
+                   Visibility="Collapsed"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/8.png"
+                   Canvas.Left="397" Canvas.Top="612"
+                   Width="216" Height="198"
+                   Tag="8"
+                   Visibility="Collapsed"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/9.png"
+                   Canvas.Left="725" Canvas.Top="782"
+                   Width="216" Height="198"
+                   Tag="9"
+                   Visibility="Collapsed"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" />
+
+            <Image Source="/Images/Imagenes/JuegoMates/imagenesmanos/10.png"
+                   Canvas.Left="1092" Canvas.Top="826"
+                   Width="216" Height="198"
+                   Tag="10"
+                   Visibility="Collapsed"
+                   MouseMove="Numero_MouseMove" MouseEnter="BtnHover" />
+
+
+            <Button Style="{StaticResource BotonAyudaEstilo}"
+                ToolTip="¿Cómo se juega?"
+                Click="BtnComoseJuega_Click"
+                Canvas.Left="1653" Canvas.Top="19"
+                MouseEnter="BtnHover"
+                HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="6.262" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Canvas>
+    </AdornerDecorator>
+</Page>

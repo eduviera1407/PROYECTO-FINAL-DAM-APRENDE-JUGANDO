@@ -1,0 +1,214 @@
+﻿<Page x:Class="AprendeJugando.PageMates"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:AprendeJugando"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      Height="1080" Width="1920"
+      Title="PageMates">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resource/Estilos.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Canvas x:Name="fondo">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Images/Imagenes/fondoSinArboles.jpg" />
+        </Canvas.Background>
+        <Button Style="{StaticResource BotonVolverEstilo}"
+                ToolTip="Volver a la pantalla principal"
+                Click="BtnVolver_Click"
+                MouseEnter="BtnHover"
+                Canvas.Left="33"
+                Canvas.Top="13"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+
+
+        <TextBlock x:Name="textoNivel" Canvas.Left="460" Canvas.Top="65" Height="80" Width="1000"
+                   HorizontalAlignment="Left" Text="REPASEMOS LOS NUMEROS" TextAlignment="Center" FontSize="80"
+                   FontFamily="/Assets/#Lazydog" Foreground="#FFF4CA44" TextWrapping="Wrap" VerticalAlignment="Top">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Gray" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <Button Canvas.Left="134" Canvas.Top="234" Tag="1" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="1" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="301" Canvas.Top="234" Tag="2" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="2" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="468" Canvas.Top="234" Tag="3" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="3" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="635" Canvas.Top="234" Tag="4" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="4" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="802" Canvas.Top="234" Tag="5" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="5" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="969" Canvas.Top="234" Tag="6" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="6" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="1136" Canvas.Top="234" Tag="7" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="7" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="1303" Canvas.Top="234" Tag="8" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="8" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="1470" Canvas.Top="234" Tag="9" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="9" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Button Canvas.Left="1637" Canvas.Top="234" Tag="10" Click="Btn_Click_Number"
+                MouseEnter="BtnHover"
+                Style="{StaticResource AnimatedNumberButton}">
+            <TextBlock Text="10" FontFamily="/Assets/#LazyDog" FontSize="150"
+                       Foreground="#FFF4CA44" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Button>
+
+        <Image x:Name="cambioNumero" Height="553" Canvas.Left="960" Canvas.Top="517" Width="641"
+               Source="/Images/Imagenes/JuegoMates/numeroUno.png" HorizontalAlignment="Left" VerticalAlignment="Center"
+               Visibility="Collapsed" />
+        <Image x:Name="personaje" Height="553" Canvas.Left="555" Canvas.Top="517" Width="291"
+               Source="/Images/Imagenes/Personaje/duda.png" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Button Width="128" Height="159"
+                Canvas.Left="1743" Canvas.Top="495"
+                Click="pasarNivel"
+                Style="{StaticResource BotonDecoradoBase}"
+                RenderTransformOrigin="0.5,0.5"
+                MouseEnter="BtnHover"
+                HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="-7.249" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Button.RenderTransform>
+
+            <Grid>
+                <Image Source="/Images/Imagenes/botonVacio.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"
+                       Margin="-3,-11,3,11">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="11.615" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <materialDesign:PackIcon Kind="ChevronRight"
+                                         Width="50" Height="50"
+                                         Foreground="Black" RenderTransformOrigin="-0.349,0.995" Margin="36,43,0,0">
+                    <materialDesign:PackIcon.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform Angle="12.553" />
+                            <TranslateTransform X="-4.365" Y="-9.817" />
+                        </TransformGroup>
+                    </materialDesign:PackIcon.RenderTransform>
+                </materialDesign:PackIcon>
+            </Grid>
+        </Button>
+
+        <Button Style="{StaticResource BotonAyudaEstilo}"
+                ToolTip="¿Cómo se juega?"
+                Click="BtnComoseJuega_Click"
+                Canvas.Left="1653" Canvas.Top="19"
+                MouseEnter="BtnHover"
+                HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="6.262" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Canvas>
+</Page>

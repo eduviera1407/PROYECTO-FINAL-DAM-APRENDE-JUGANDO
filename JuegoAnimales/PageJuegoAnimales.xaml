@@ -1,0 +1,105 @@
+﻿<Page x:Class="AprendeJugando.PageJuegoAnimales"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:AprendeJugando"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      Height="1080" Width="1920"
+      Title="PageJuegoAnimales">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resource/Estilos.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Canvas x:Name="fondo">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Images/Imagenes/fondoSinArboles.jpg" />
+        </Canvas.Background>
+
+        <!-- Botón Volver -->
+        <Button Style="{StaticResource BotonVolverEstilo}"
+                Click="BtnVolver_Click"
+                ToolTip="Volver a la pantalla principal"
+                Canvas.Left="33" Canvas.Top="13"
+                MouseEnter="Btn_hover" />
+
+        <!-- Botón Como se juega -->
+        <Button Style="{StaticResource BotonAyudaEstilo}"
+                Click="BtnComoseJuega_Click"
+                ToolTip="¿Cómo se juega?"
+                Canvas.Left="1686" Canvas.Top="19"
+                MouseEnter="Btn_hover" HorizontalAlignment="Left" VerticalAlignment="Center" Width="211" />
+
+        <!-- Botones de animales -->
+        <Button Click="Animal_Click" Name="animal1" Canvas.Left="440" Canvas.Top="153" Height="411" Width="520"
+                Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button Click="Animal_Click" Name="animal2" Canvas.Left="965" Canvas.Top="153" Height="411" Width="520"
+                Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button Click="Animal_Click" Name="animal3" Canvas.Left="440" Canvas.Top="574" Height="416" Width="520"
+                Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Click="Animal_Click" Name="animal4" Canvas.Left="965" Canvas.Top="574" Height="416" Width="520"
+                Background="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center"
+                BorderBrush="{x:Null}" />
+        <Button Click="Animal_Click" Name="animal5" Canvas.Left="1345" Canvas.Top="197" Height="416" Width="520"
+                Visibility="Visible" Background="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Center"
+                VerticalAlignment="Top" BorderBrush="{x:Null}" />
+        <Button Click="Animal_Click" Name="animal6" Canvas.Left="1345" Canvas.Top="618" Height="416" Width="520"
+                Visibility="Visible" Background="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Center"
+                VerticalAlignment="Top" BorderBrush="{x:Null}" />
+
+        <!-- Botón repetir sonido -->
+        <Button Click="Sonido_Click" Name="Sonido" Canvas.Top="384" Height="312" Width="286">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image Source="/Images/Imagenes/botonVacio.png" Stretch="UniformToFill"
+                                           Margin="-13,0,2,0" />
+                                    <TextBlock Text="Repetir Sonido" Foreground="Black" FontSize="30" FontWeight="Bold"
+                                               FontFamily="/Assets/#Lazydog" HorizontalAlignment="Center"
+                                               VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                        <TextBlock.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform />
+                                                <SkewTransform />
+                                                <RotateTransform Angle="-2.782" />
+                                                <TranslateTransform />
+                                            </TransformGroup>
+                                        </TextBlock.RenderTransform>
+                                    </TextBlock>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="Opacity" Value="1" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <!-- Título -->
+        <TextBlock Text="¿DE QUE ANIMAL ES ESTE SONIDO?" Canvas.Left="352" Canvas.Top="32"
+                   FontFamily="/Assets/#Lazydog" FontSize="80" Foreground="#f4ca44" TextAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Gray" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+            </TextBlock.Effect>
+        </TextBlock>
+
+      
+
+    </Canvas>
+</Page>

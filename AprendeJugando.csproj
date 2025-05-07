@@ -1,0 +1,572 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\**" />
+    <EmbeddedResource Remove="Views\**" />
+    <None Remove="Views\**" />
+    <Page Remove="Views\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Lazydog.ttf" />
+    <None Remove="botonVacio.png" />
+    <None Remove="ExplicacionJuegoCartas.png" />
+    <None Remove="fondoSinArboles.jpg" />
+    <None Remove="Images\botonIniciar.png" />
+    <None Remove="Images\botonVacio.png" />
+    <None Remove="Images\Cancel Action.png" />
+    <None Remove="Images\Imagenes\ajustesBoton.png" />
+    <None Remove="Images\Imagenes\Animals\abeja.jpeg" />
+    <None Remove="Images\Imagenes\Animals\buho.jpeg" />
+    <None Remove="Images\Imagenes\Animals\caballo.jpeg" />
+    <None Remove="Images\Imagenes\Animals\cabra.jpeg" />
+    <None Remove="Images\Imagenes\Animals\cerdo.jpeg" />
+    <None Remove="Images\Imagenes\Animals\elefante.jpeg" />
+    <None Remove="Images\Imagenes\Animals\gallo.jpg" />
+    <None Remove="Images\Imagenes\Animals\gato.jpeg" />
+    <None Remove="Images\Imagenes\Animals\leon.jpeg" />
+    <None Remove="Images\Imagenes\Animals\mono.jpg" />
+    <None Remove="Images\Imagenes\Animals\pavo.jpeg" />
+    <None Remove="Images\Imagenes\Animals\perro.jpeg" />
+    <None Remove="Images\Imagenes\Animals\vaca.jpeg" />
+    <None Remove="Images\Imagenes\botonEntendido.png" />
+    <None Remove="Images\Imagenes\botonIniciar.png" />
+    <None Remove="Images\Imagenes\botonParaPadres.png" />
+    <None Remove="Images\Imagenes\botonSalir.png" />
+    <None Remove="Images\Imagenes\botonVacio.png" />
+    <None Remove="Images\Imagenes\botonValidar.png" />
+    <None Remove="Images\Imagenes\cartasAnimales.jpg" />
+    <None Remove="Images\Imagenes\cartasAnimales.png" />
+    <None Remove="Images\Imagenes\Cartas\cartaVacia.png" />
+    <None Remove="Images\Imagenes\Cartas\chimpanze.png" />
+    <None Remove="Images\Imagenes\Cartas\cobra.png" />
+    <None Remove="Images\Imagenes\Cartas\cocodrilo.png" />
+    <None Remove="Images\Imagenes\Cartas\gorila.png" />
+    <None Remove="Images\Imagenes\Cartas\mono.png" />
+    <None Remove="Images\Imagenes\Cartas\orangutan.png" />
+    <None Remove="Images\Imagenes\Cartas\rana.png" />
+    <None Remove="Images\Imagenes\Cartas\serpiente.png" />
+    <None Remove="Images\Imagenes\estrella.png" />
+    <None Remove="Images\Imagenes\ExplicacionJuegoCartas.png" />
+    <None Remove="Images\Imagenes\ExplicacionJuegos.png" />
+    <None Remove="Images\Imagenes\fondo.jpg" />
+    <None Remove="Images\Imagenes\fondoSinArboles.jpg" />
+    <None Remove="Images\Imagenes\ImagenJuegos.png" />
+    <None Remove="Images\Imagenes\imagenProgreso.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\10.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\2.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\3.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\4.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\5.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\6.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\7.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\8.png" />
+    <None Remove="Images\Imagenes\JuegoMates\imagenesmanos\9.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroCinco.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroCuatro.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroDiez.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroDos.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroNueve.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroOcho.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroSeis.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroSiete.png" />
+    <None Remove="Images\Imagenes\JuegoMates\numeroUno.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto1.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto10.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto2.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto3.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto4.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto5.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto6.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto7.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto8.png" />
+    <None Remove="Images\Imagenes\JuegoMates\objetos\objeto9.png" />
+    <None Remove="Images\Imagenes\lengua.png" />
+    <None Remove="Images\Imagenes\matematicas.png" />
+    <None Remove="Images\Imagenes\Personaje\alegre.png" />
+    <None Remove="Images\Imagenes\Personaje\duda.png" />
+    <None Remove="Images\Imagenes\Personaje\enfado.png" />
+    <None Remove="Images\Imagenes\Personaje\lenguafuera.png" />
+    <None Remove="Images\Imagenes\Personaje\llorar.png" />
+    <None Remove="Images\Imagenes\Personaje\riendose.png" />
+    <None Remove="Images\Imagenes\preguntaSuma.png" />
+    <None Remove="Images\Imagenes\zoologia.png" />
+    <None Remove="Images\LOGO.png" />
+    <None Remove="Sounds\aplausos.mp3" />
+    <None Remove="Sounds\botonPresionado.mp3" />
+    <None Remove="Sounds\cartasRevertidas.mp3" />
+    <None Remove="Sounds\empate.mp3" />
+    <None Remove="Sounds\intentalo.wav" />
+    <None Remove="Sounds\juegoCompletado.wav" />
+    <None Remove="Sounds\nivel2Mensaje.mp4" />
+    <None Remove="Sounds\nivelCompletado.wav" />
+    <None Remove="Sounds\pasarporEncima.mp3" />
+    <None Remove="Sounds\sonidoCartas.mp3" />
+    <None Remove="Sounds\sonidoError.mp3" />
+    <None Remove="Sounds\sonidoNivel2Cartas.wav" />
+    <None Remove="Sounds\sonidoPrincipal.wav" />
+    <None Remove="Sounds\sonidoPunto.wav" />
+    <None Remove="Sounds\SoundsAnimals\abeja.mp3" />
+    <None Remove="Sounds\SoundsAnimals\buho.mp3" />
+    <None Remove="Sounds\SoundsAnimals\caballo.mp3" />
+    <None Remove="Sounds\SoundsAnimals\cabra.mp3" />
+    <None Remove="Sounds\SoundsAnimals\cerdo.mp3" />
+    <None Remove="Sounds\SoundsAnimals\elefante.mp3" />
+    <None Remove="Sounds\SoundsAnimals\ExplicacionJAnimales.wav" />
+    <None Remove="Sounds\SoundsAnimals\gallo.mp3" />
+    <None Remove="Sounds\SoundsAnimals\gato.mp3" />
+    <None Remove="Sounds\SoundsAnimals\leon.mp3" />
+    <None Remove="Sounds\SoundsAnimals\mono.mp3" />
+    <None Remove="Sounds\SoundsAnimals\pavo.mp3" />
+    <None Remove="Sounds\SoundsAnimals\perro.mp3" />
+    <None Remove="Sounds\SoundsAnimals\preguntaSonidoAnimal.wav" />
+    <None Remove="Sounds\SoundsAnimals\vaca.mp3" />
+    <None Remove="Sounds\SoundsNumeros\SoundCinco.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundCuatro.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundDiez.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundDos.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundNueve.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundOcho.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundSeis.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundSiete.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundTres.wav" />
+    <None Remove="Sounds\SoundsNumeros\SoundUno.wav" />
+    <None Remove="Sounds\SoundsNumeros\vozExplicacionNivel1Mates.wav" />
+    <None Remove="Sounds\subirNivel.wav" />
+    <None Remove="Sounds\vamosConLosSiguientes.wav" />
+    <None Remove="Sounds\victoria.m4a" />
+    <None Remove="Sounds\vozEstrella.wav" />
+    <None Remove="Sounds\vozExplicacionJC.mp3" />
+    <None Remove="Videos\tutorialJuegoAnimales.mp4" />
+    <None Remove="Videos\tutorialJuegoCartas.mp4" />
+    <None Remove="Videos\tutorialJuegoMatesNivel1.mp4" />
+    <None Remove="Videos\tutorialJuegoMatesNivel2.mp4" />
+    <None Remove="Videos\tutorialJuegoMatesNivel3.mp4" />
+    <None Remove="Videos\tutorialJuegoMatesNivel4.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="5.0.21" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.2.1" />
+    <PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.43.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Lazydog.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="botonVacio.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExplicacionJuegoCartas.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\fondoSinArboles.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\botonIniciar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\botonVacio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cancel Action.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\ajustesBoton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\abeja.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\buho.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\caballo.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\cabra.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\cerdo.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\elefante.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\gallo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\gato.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\leon.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\mono.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\pavo.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\perro.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Animals\vaca.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\botonEntendido.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\botonIniciar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\botonParaPadres.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\botonSalir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\botonVacio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\botonValidar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\cartasAnimales.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\cartasAnimales.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\cartaVacia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\chimpanze.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\cobra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\cocodrilo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\gorila.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\mono.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\orangutan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\rana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Cartas\serpiente.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\estrella.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\ExplicacionJuegoCartas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\ExplicacionJuegos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\fondo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\fondoSinArboles.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\ImagenJuegos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\imagenProgreso.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\imagenesmanos\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroCinco.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroCuatro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroDiez.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroDos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroNueve.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroOcho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroSeis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroSiete.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroTres.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\numeroUno.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\JuegoMates\objetos\objeto9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\lengua.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\matematicas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\Personaje\alegre.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\aplausos.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\cartasRevertidas.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\intentalo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\juegoCompletado.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\nivel2Mensaje.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\abeja.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\buho.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\caballo.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\cabra.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\cerdo.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\elefante.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\ExplicacionJAnimales.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\gallo.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\gato.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\leon.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\mono.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\pavo.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\perro.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\preguntaSonidoAnimal.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsAnimals\vaca.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundCinco.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundCuatro.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundDiez.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundDos.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundNueve.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundOcho.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundSeis.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundSiete.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundTres.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\SoundUno.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\SoundsNumeros\vozExplicacionNivel1Mates.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\subirNivel.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\vamosConLosSiguientes.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\tutorialJuegoAnimales.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\tutorialJuegoCartas.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\tutorialJuegoMatesNivel1.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\tutorialJuegoMatesNivel2.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\tutorialJuegoMatesNivel3.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\tutorialJuegoMatesNivel4.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\Imagenes\Personaje\duda.png" />
+    <Resource Include="Images\Imagenes\Personaje\enfado.png" />
+    <Resource Include="Images\Imagenes\Personaje\lenguafuera.png" />
+    <Resource Include="Images\Imagenes\Personaje\llorar.png" />
+    <Resource Include="Images\Imagenes\Personaje\riendose.png" />
+    <Content Include="Images\Imagenes\preguntaSuma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Imagenes\zoologia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LOGO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\botonPresionado.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\empate.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\pasarporEncima.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\sonidoCartas.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\sonidoNivel2Cartas.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\sonidoPrincipal.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\sonidoPunto.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\victoria.m4a">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\vozEstrella.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\vozExplicacionJC.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sounds\sonidoError.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sounds\nivelCompletado.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,162 @@
+﻿<Page x:Class="AprendeJugando.PageJuegoCartas"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:AprendeJugando"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="PageJuegoCartas">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resource/Estilos.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+    <Canvas x:Name="fondo">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Images/Imagenes/fondoSinArboles.jpg" />
+
+        </Canvas.Background>
+
+        <Button Style="{StaticResource BotonAyudaEstilo}"
+                ToolTip="¿Cómo se juega?"
+                Click="BtnComoseJuega_Click"
+                Canvas.Left="1653" Canvas.Top="19"
+                MouseEnter="Btn_hover"
+                HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="6.262" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+        <Button Style="{StaticResource BotonVolverEstilo}"
+                ToolTip="Volver a la pantalla principal"
+                Click="BtnVolver_Click"
+                Canvas.Left="33" Canvas.Top="13"
+                MouseEnter="Btn_hover"
+                HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+        <Button x:Name="CartaVacia1"
+                Style="{StaticResource CartaVaciaEstilo}"
+                Canvas.Left="537" Canvas.Top="136"
+                Tag="0" Click="Carta_Click" MouseEnter="Btn_hover">
+            <Button.Content>
+                <Image Source="/Images/Imagenes/Cartas/cartaVacia.png" Stretch="UniformToFill" />
+            </Button.Content>
+        </Button>
+
+
+        <Button x:Name="CartaVacia2"
+                Style="{StaticResource CartaVaciaEstilo}"
+                Canvas.Left="537"
+                Canvas.Top="545"
+                Tag="2"
+                Click="Carta_Click"
+                MouseEnter="Btn_hover">
+            <Button.Content>
+                <Image Source="/Images/Imagenes/Cartas/cartaVacia.png"
+                       Stretch="UniformToFill" />
+            </Button.Content>
+        </Button>
+
+        <Button x:Name="CartaVacia3"
+                Style="{StaticResource CartaVaciaEstilo}"
+                Click="Carta_Click"
+                Canvas.Left="1084"
+                Canvas.Top="136"
+                RenderTransformOrigin="0.5,0.5"
+                Tag="1"
+                MouseEnter="Btn_hover"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center">
+
+            <!-- Imagen inicial de carta vacía -->
+            <Button.Content>
+                <Image Source="/Images/Imagenes/Cartas/cartaVacia.png"
+                       Stretch="UniformToFill" />
+            </Button.Content>
+        </Button>
+
+
+        <Button x:Name="CartaVacia4"
+                Style="{StaticResource CartaVaciaEstilo}"
+                Click="Carta_Click"
+                Tag="3"
+                MouseEnter="Btn_hover"
+                Canvas.Left="1084"
+                Canvas.Top="540"
+                RenderTransformOrigin="0.5,0.5"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center">
+
+            <!-- Imagen inicial de carta vacía -->
+            <Button.Content>
+                <Image Source="/Images/Imagenes/Cartas/cartaVacia.png"
+                       Stretch="UniformToFill" />
+            </Button.Content>
+        </Button>
+
+        <Button x:Name="CartaVacia5"
+                Style="{StaticResource CartaVaciaEstilo}"
+                Click="Carta_Click"
+                Tag="1"
+                Visibility="Collapsed"
+                MouseEnter="Btn_hover"
+                Canvas.Left="1251"
+                Canvas.Top="136"
+                RenderTransformOrigin="0.5,0.5"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center">
+
+            <Button.Content>
+                <Image Source="/Images/Imagenes/Cartas/cartaVacia.png"
+                       Stretch="UniformToFill" />
+            </Button.Content>
+        </Button>
+        <Button x:Name="CartaVacia6"
+                Style="{StaticResource CartaVaciaEstilo}"
+                Click="Carta_Click"
+                Tag="1"
+                Visibility="Collapsed"
+                MouseEnter="Btn_hover"
+                Canvas.Left="1251"
+                Canvas.Top="545"
+                RenderTransformOrigin="0.5,0.5"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center">
+
+            <Button.Content>
+                <Image Source="/Images/Imagenes/Cartas/cartaVacia.png"
+                       Stretch="UniformToFill" />
+            </Button.Content>
+        </Button>
+
+
+        <Image x:Name="personajeSonriente" Height="545" Width="461"
+               HorizontalAlignment="Right" VerticalAlignment="Bottom"
+               Source="/Images\Imagenes\Personaje\alegre.png"
+               Canvas.Left="1426" Canvas.Top="443" />
+   
+        <TextBlock x:Name="textoNivel" Canvas.Left="711" Canvas.Top="32" Height="80" Width="460"
+                   HorizontalAlignment="Left" Text="NIVEL 1" TextAlignment="Center" FontSize="80"
+                   FontFamily="/Assets/#Lazydog" Foreground="#FFF4CA44" TextWrapping="Wrap">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Gray" ShadowDepth="5" BlurRadius="0" Opacity="1" />
+            </TextBlock.Effect>
+        </TextBlock>
+
+
+    </Canvas>
+
+</Page>
