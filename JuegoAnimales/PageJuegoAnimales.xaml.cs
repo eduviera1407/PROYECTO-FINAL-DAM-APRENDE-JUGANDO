@@ -1,4 +1,4 @@
-﻿using AprendeJugando.JuegoAnimales;
+using AprendeJugando.JuegoAnimales;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -152,6 +152,8 @@ namespace AprendeJugando
             SonidoManager.Instance.DetenerTodosLosSonidos();
             estrellas++;
 
+            int nivelActual = estrellas > ACIERTOS_NIVEL2 ? 2 : 1; 
+
             if (estrellas >= ESTRELLAS_TOTALES_FIN_JUEGO)
             {
                 SonidoManager.Instance.ReproducirSonido("Sounds/juegoCompletado.wav");
@@ -162,12 +164,11 @@ namespace AprendeJugando
                     "/Images/Imagenes/Personaje/alegre.png"
                 );
 
-
                 this.NavigationService.Navigate(new PageJugar());
                 return;
             }
 
-            new LiteDbService().RegistrarAcierto(SesionActual.PadreId, "Animales", 1);
+            new LiteDbService().RegistrarAcierto(SesionActual.PadreId, "Animales", nivelActual);
 
             SonidoManager.Instance.ReproducirSonido("Sounds/sonidoPunto.wav");
             SonidoManager.Instance.ReproducirSonido("Sounds/vozEstrella.wav");
